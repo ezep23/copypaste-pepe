@@ -7,3 +7,37 @@
 body{
     background-color: #f2fed1;
 }
+
+header{
+    #navbar{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2%;
+
+        & #categorias {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        } 
+    }
+}
+
+main{
+    padding: 2%;
+    margin: auto;
+
+    #presentacion{
+        text-align: center;
+    }
+
+    #seccion-acordiones{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 2% 2%;
+        gap: 20px;
+        
+    }
+}
+
