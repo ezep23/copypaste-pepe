@@ -16,6 +16,7 @@ class Acordion extends HTMLElement {
         </div>
         `;
 
+        // insertandolo en el HTML
         const container = document.createElement('div');
         container.innerHTML = HTML;
 
@@ -70,7 +71,7 @@ class Acordion extends HTMLElement {
             }
 
             .accordion-header {
-                background-color: #f7f7f7;
+                background-color: #d9d9d9;
                 padding: 10px;
                 cursor: pointer;
                 font-weight: bold;
@@ -83,16 +84,20 @@ class Acordion extends HTMLElement {
                 overflow: hidden;
                 transition: max-height 0.3s ease;
                 padding: 0 10px;
+                gap: 10px;
                 background-color: #fff;
             }
 
             .accordion-content.open {
+                gap: 10px;
                 max-height: 100px; /* Ajusta según el contenido */
                 padding: 10px;
             }
 
             .copy-button{
+                background-color: #d9d9d9;
                 border-radius: 50px;
+                padding: 5px;
                 width: ;
             }
         `;

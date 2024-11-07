@@ -2,13 +2,18 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 body{
-    background-color: #f2fed1;
+    background-color: #f3fae1;
 }
 
 header{
+    background-color: #d9d9d9;
+
     #navbar{
         display: flex;
         flex-direction: row-reverse;
@@ -30,6 +35,11 @@ main{
 
     #presentacion{
         text-align: center;
+        
+        & h1{
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
     }
 
     #seccion-acordiones{
