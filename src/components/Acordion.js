@@ -7,10 +7,11 @@ class Acordion extends HTMLElement {
         const HTML = `
         <div class="accordion">
             <div class="accordion-item">
-              <div class="accordion-header">${this.getAttribute("title")}</div>
-              <div class="accordion-content">
-                <slot name="contenido"></slot>
-              </div>
+            <div class="accordion-header">${this.getAttribute("title")}</div>
+                <div class="accordion-content">
+                <slot name="contenido" class="copiar"></slot>
+                <button class="copy-button">Copiar al portapapeles</button>
+                </div>
             </div>
         </div>
         `;
@@ -29,6 +30,29 @@ class Acordion extends HTMLElement {
                 container.querySelector('.accordion-content').classList.remove('open');
                 content.classList.add('open');
             }
+        });
+
+        // Funcionalidad del botón copiar
+        container.querySelector('.copy-button').addEventListener('click', () => {
+        const slot = container.querySelector('slot[name="contenido"]');
+        const assignedNodes = slot.assignedNodes();
+    
+        // Busca solo elementos con texto o texto en el slot
+        const texto = assignedNodes.map(node => node.textContent.trim()).join(' ');
+  
+        navigator.clipboard.writeText(texto)
+        .then(() => {
+            Toastify({
+                text: "Texto copiado",
+                duration: 1000,
+                style: {
+                    background: "#000",
+                },
+            }).showToast();
+        })
+        .catch(error => {
+            console.error('Error al copiar texto:', error);
+            });
         });
 
         // Estilos del producto
@@ -53,6 +77,8 @@ class Acordion extends HTMLElement {
             }
 
             .accordion-content {
+                display: flex;
+                flex-direction: column;
                 max-height: 0;
                 overflow: hidden;
                 transition: max-height 0.3s ease;
@@ -63,6 +89,11 @@ class Acordion extends HTMLElement {
             .accordion-content.open {
                 max-height: 100px; /* Ajusta según el contenido */
                 padding: 10px;
+            }
+
+            .copy-button{
+                border-radius: 50px;
+                width: ;
             }
         `;
         this.shadowRoot.appendChild(container);
