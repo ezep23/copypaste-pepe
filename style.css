@@ -16,7 +16,6 @@ header{
 
     #navbar{
         display: flex;
-        flex-direction: row-reverse;
         justify-content: space-around;
         align-items: center;
         padding: 2%;

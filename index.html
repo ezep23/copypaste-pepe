@@ -19,18 +19,26 @@
     <!-- Navbar -->
     <header>
         <nav id="navbar">
+            <!-- Titulo navbar -->
+            <p>Copypasting website</p>
             <!-- categorias para filtrar -->
             <ul id="categorias">
                 <li>Precios</li>
                 <li>Información</li>
                 <li>Reseñas</li>
             </ul>
-            <!-- Titulo navbar -->
-            <p>Copypasting website</p>
+            <!-- Buscador -->
+            <form>
+                <input type="text" id="entrada">
+                <button id="btn-buscar" onclick="buscarRespuesta()">Búscar</button>
+            </form>
         </nav>
     </header>
     <main>
         <!-- Titulo de presentación -->
+        <section id="busqueda">
+
+        </section>
         <section id="presentacion">
             <h1>ACORDIONES</h1>
         </section>
@@ -69,5 +77,6 @@
     </main>
     <!-- Toastify (Notificaciones) -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>

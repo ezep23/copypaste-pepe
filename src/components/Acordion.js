@@ -7,7 +7,7 @@ class Acordion extends HTMLElement {
         const HTML = `
         <div class="accordion">
             <div class="accordion-item">
-            <div class="accordion-header">${this.getAttribute("title")}</div>
+            <div class="accordion-header">${this.getAttribute("title")} <button class="copy-button" id="button-header" >Copiar</button> </div>
                 <div class="accordion-content">
                 <slot name="contenido" class="copiar"></slot>
                 <button class="copy-button">Copiar al portapapeles</button>
@@ -70,7 +70,9 @@ class Acordion extends HTMLElement {
                 border-bottom: 1px solid #ccc;
             }
 
-            .accordion-header {
+            .accordion-header{
+                display: flex;
+                justify-content: space-between;
                 background-color: #d9d9d9;
                 padding: 10px;
                 cursor: pointer;
@@ -98,7 +100,7 @@ class Acordion extends HTMLElement {
                 background-color: #d9d9d9;
                 border-radius: 50px;
                 padding: 5px;
-                width: ;
+                cursor: pointer;
             }
         `;
         this.shadowRoot.appendChild(container);
