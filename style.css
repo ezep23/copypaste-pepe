@@ -23,6 +23,7 @@ header{
         & #categorias {
             display: flex;
             list-style: none;
+            cursor: pointer;
             gap: 20px;
         } 
     }
@@ -31,6 +32,13 @@ header{
 main{
     padding: 2%;
     margin: auto;
+
+    #busqueda{
+        display: grid;
+        margin: 2% 2%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
 
     #presentacion{
         text-align: center;
@@ -45,7 +53,7 @@ main{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         margin: 2% 2%;
-        gap: 20px;
+        gap: 10px;
         
     }
 }

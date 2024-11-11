@@ -23,14 +23,14 @@
             <p>Copypasting website</p>
             <!-- categorias para filtrar -->
             <ul id="categorias">
-                <li>Precios</li>
-                <li>Información</li>
-                <li>Reseñas</li>
+                <li onclick="filtrarCategoria('precios')">Precios</li>
+                <li onclick="filtrarCategoria('informacion')">Información</li>
+                <li onclick="filtrarCategoria('resenas')">Reseñas</li>
             </ul>
             <!-- Buscador -->
             <form>
                 <input type="text" id="entrada">
-                <button id="btn-buscar" onclick="buscarRespuesta()">Búscar</button>
+                <button type="submit" onclick="filtrarBusqueda()">Búscar</button>
             </form>
         </nav>
     </header>
@@ -40,36 +40,36 @@
 
         </section>
         <section id="presentacion">
-            <h1>ACORDIONES</h1>
+            <h1>TODOS LOS ACORDIONES</h1>
         </section>
         <!-- Seccion de componentes--> 
         <section id="seccion-acordiones">
 
-            <acordion-component title="Boca">
+            <acordion-component title="Boca" class="precios">
                 <span slot="contenido">Buen equipo</span>
             </acordion-component>
 
-            <acordion-component title="River">
+            <acordion-component title="River" class="precios">
                 <span slot="contenido">E nada mal</span>
             </acordion-component>
 
-            <acordion-component title="Estudiantes">
+            <acordion-component title="Estudiantes" class="precios">
                 <span slot="contenido">Boca</span>
             </acordion-component>
 
-            <acordion-component title="Estudiantes">
+            <acordion-component title="Estudiantes" class="precios">
                 <span slot="contenido">Boca</span>
             </acordion-component>
 
-            <acordion-component title="Estudiantes">
+            <acordion-component title="Estudiantes" class="informacion">
                 <span slot="contenido">Boca</span>
             </acordion-component>
 
-            <acordion-component title="Estudiantes">
+            <acordion-component title="Estudiantes" class="informacion">
                 <span slot="contenido">Boca</span>
             </acordion-component>
 
-            <acordion-component title="Estudiantes">
+            <acordion-component title="Estudiantes" class="resenas">
                 <span slot="contenido">Boca</span>
             </acordion-component>
 
