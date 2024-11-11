@@ -7,17 +7,18 @@ function filtrarBusqueda(e) {
   const coincidencia = arrayComponentes.find(comp => comp.getAttribute("title") === entrada);
   
   if (coincidencia) {
-    const insertarBusqueda => (coincidencia){
+    function insertCoincidencia(coincidencia) {
         seccionBusqueda.innerHTML = "";
 
         const HTML = `
-          <acordion-component title="${titulo}" class="${categoria}">
-                <span slot="contenido">${contenido}</span>
+          <acordion-component title="${coincidencia.getAttribute("title")}" class="${coincidencia.getAttribute("class")}">
+                <span slot="contenido">${comp.innerHTML}</span>
             </acordion-component>
         `;
 
         seccionBusqueda.innerHTML += HTML;
     };
+    insertCoincidencia;
   } else {
     return;
   }
