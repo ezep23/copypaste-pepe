@@ -24,13 +24,17 @@ En el atributo `title` obviamente va a ir el titulo que va a aparecer en el enca
 En el atributo `class` irá en minúscula la categoría por la cual filtraremos con los enlaces del navbar.
 Esto se modifica en `index.html` modificando los parametros que le pasamos a la función filtrarCategoria
 tambíen el nombre de las categorias.
+
 ![App Screenshot](./src/img/navbar.png)
+
 Y también en el `index.js` cambiando las categorias
+
 ![App Screenshot](./src/img/filtrarCategoria.png)
 
 Por último dentro de la etiqueta `acordion-component` debemos agregar una etiqueta `span` con el atributo `slot="contenido"` y dentro de este span el contenido de nuestro acordión, esto se hace para indicarle al webcomponent que es nuestro contenido a la hora de copiarlo e insertarlo en el HTML.
 
 Resultado final:
+
 ![App Screenshot](./src/img/acordion.png)
 
 
