@@ -20,7 +20,7 @@
     <header>
         <nav id="navbar">
             <!-- Titulo navbar -->
-            <p>Copypasting website</p>
+            <a href="./index.html">Copypasting website</a>
             <!-- categorias para filtrar -->
             <ul id="categorias">
                 <li onclick="filtrarCategoria('precios')">Precios</li>
@@ -29,8 +29,8 @@
             </ul>
             <!-- Buscador -->
             <form>
-                <input type="text" id="entrada">
-                <button type="submit" onclick="filtrarBusqueda()">Búscar</button>
+                <input type="search" id="entrada">
+                <button type="submit" id="buscar">Búscar</button>
             </form>
         </nav>
     </header>
@@ -38,6 +38,12 @@
         <!-- Titulo de presentación -->
         <section id="busqueda">
 
+        </section>
+        <section>
+            <p id="texto-filtro"></p>
+            <div id="filtrados">
+
+            </div>
         </section>
         <section id="presentacion">
             <h1>TODOS LOS ACORDIONES</h1>
