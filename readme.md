@@ -19,9 +19,9 @@ Para comenzar estos están implementados en el index dentro de la sección acord
     </acordion-component>
 
 
-En el atributo `title` obviamente va a ir el titulo que va a aparecer en el encabezado del acordión y además nos va a permitir filtrar mediante el buscador.
+* En el atributo `title` obviamente va a ir el titulo que va a aparecer en el encabezado del acordión y además nos va a permitir filtrar mediante el buscador.
 
-En el atributo `class` irá en minúscula la categoría por la cual filtraremos con los enlaces del navbar.
+* En el atributo `class` irá en minúscula la categoría por la cual filtraremos con los enlaces del navbar.
 Esto se modifica en `index.html` modificando los parametros que le pasamos a la función filtrarCategoria
 tambíen el nombre de las categorias.
 
@@ -31,7 +31,7 @@ Y también en el `index.js` cambiando las categorias
 
 ![App Screenshot](./src/img/filtrarCategoria.png)
 
-Por último dentro de la etiqueta `acordion-component` debemos agregar una etiqueta `span` con el atributo `slot="contenido"` y dentro de este span el contenido de nuestro acordión, esto se hace para indicarle al webcomponent que es nuestro contenido a la hora de copiarlo e insertarlo en el HTML.
+* Por último dentro de la etiqueta `acordion-component` debemos agregar una etiqueta `span` con el atributo `slot="contenido"` y dentro de este span el contenido de nuestro acordión, esto se hace para indicarle al webcomponent que es nuestro contenido a la hora de copiarlo e insertarlo en el HTML.
 
 Resultado final:
 
