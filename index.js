@@ -28,11 +28,10 @@ const filtrarBusqueda = (e) => {
 }
 
 buscar.addEventListener("click", filtrarBusqueda)
-
+  
 function filtrarCategoria(categoria) {
   
   const seccionFiltrados = document.querySelector("#filtrados")
-
   function iterarFiltrados(array){
     seccionFiltrados.innerHTML = "";
 
